@@ -44,7 +44,9 @@ function getResults(input) {
         } else if (answer.value.indexOf(input.charAt(i)) > -1) {
             html += '<span class="glyphicon glyphicon-transfer"></span>';
         } else {
-            html += '';
+            html += '<span class="glyphicon glyphicon-remove"></span>';
         }
+
+        document.getElementById('results').innerHTML += html
     }
 }
