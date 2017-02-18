@@ -47,7 +47,7 @@ function getResults(input) {
         } else {
             html += '<span class="glyphicon glyphicon-remove"></span>';
         }
-
+        html += '</div></div>'
         document.getElementById('results').innerHTML += html;
         if (input == answer.value) {
             return true;
