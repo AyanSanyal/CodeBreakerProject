@@ -11,10 +11,24 @@ function guess() {
         return;
     }
     attempt.value++;
+
     if (getResults(input.value)) {
         setMessage('You win! :)');
+        showAnswer(true);
+        showReplay();
+    } else if (getResults(input.value) >= 10) {
+        setMessage('You Lose! :(');
+        showAnswer(false);
+        showReplay();
+
+
+
+    } else {
+        setMessage('Incorrect, try again.');
     }
 }
+
+
 
 
 //implement new functions here
@@ -58,4 +72,20 @@ function getResults(input) {
         return false;
 
     }
+}
+
+function showAnswer(success) {
+    let code = getElementById('code');
+    if (success) {
+        code.className += 'success';
+    } else {
+        code.className += 'failure';
+    }
+    code.innerHTML = answer.value;
+}
+
+function showReplay() {
+    document.getElementById('guessing-div').style.display = "none";
+    document.getElementById('replay-div').style.display = "block";
+
 }
