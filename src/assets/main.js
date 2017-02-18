@@ -54,5 +54,3 @@ function getResults(input) {
         return false;
     }
 }
-}
-}
