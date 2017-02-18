@@ -75,7 +75,7 @@ function getResults(input) {
 }
 
 function showAnswer(success) {
-    let code = getElementById('code');
+    let code = document.getElementById('code');
     if (success) {
         code.className += 'success';
     } else {
