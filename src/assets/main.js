@@ -41,8 +41,7 @@ function getResults(input) {
     for (i = 0; i < input.length; i++) {
         if (input.charAt(i) == answer.value.charAt(i)) {
             html += '<span class="glyphicon glyphicon-ok"></span>';
-        }
-        if (input.charAt(i) == answer.value.charAt(i) > -1) {
+        } else if (answer.value.indexOf(input.chatAt(i)) > -1) {
             html += '<span class="glyphicon glyphicon-transfer"></span>';
         } else {
             html += '';
