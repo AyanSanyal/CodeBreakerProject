@@ -47,6 +47,6 @@ function getResults(input) {
             html += '<span class="glyphicon glyphicon-remove"></span>';
         }
 
-        document.getElementById('results').innerHTML += html
+        document.getElementById('results').innerHTML += html;
     }
 }
