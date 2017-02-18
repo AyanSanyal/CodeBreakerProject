@@ -50,7 +50,8 @@ function getResults(input) {
         document.getElementById('results').innerHTML += html;
         if (input == answer.value) {
             return true;
-        } else {}
-        return false;
+        } else {
+            return false;
+        }
     }
 }
